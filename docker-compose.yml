@@ -19,12 +19,12 @@ services:
     environment:
       # For a better reference as to what these variables do, check out 'config.dist.php' or 'docker/php-fpm/src/config.php'.
       # Please replace them with values that are relevant to your situation!
-      LOCATION: Location
-      FACILITY: Facility
-      FACILITY_URL: http://localhost/
-      IPV4_ADDRESS: 127.0.0.1
-      IPV6_ADDRESS: ::1
-      MAPS_QUERY: Amsterdam
+      LOCATION: BD1 | Dhaka,Bangladesh
+      FACILITY: Optimus Technologies
+      FACILITY_URL: https://www.peeringdb.com/net/26263
+      IPV4_ADDRESS: 103.163.246.69
+      IPV6_ADDRESS: fe80::216:3eff:fec1:4f92
+      MAPS_QUERY: Dhaka,Bangladesh
       # Pass these variables with any arbitrary value to disable the respective block.
       # DISABLE_BLOCK_NETWORK: 'true'
       # DISABLE_BLOCK_LOOKINGGLASS: 'true'
@@ -34,11 +34,11 @@ services:
       # Uncomment if you require visitors to accept the Terms of Use; the value should be a link to the terms.
       # LG_TERMS: http://localhost/
 
-  # iperf3:
-  #   image: networkstatic/iperf3:latest
-  #   container_name: lg-iperf3
-  #   network_mode: host
-  #   command: -s
-  #   tty: true
-  #   stdin_open: true
-  #   restart: unless-stopped
+   iperf3:
+     image: networkstatic/iperf3:latest
+     container_name: lg-iperf3
+     network_mode: host
+     command: -s
+     tty: true
+     stdin_open: true
+     restart: unless-stopped
